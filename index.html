@@ -7,6 +7,7 @@
 
   <title>Wikipedia viewer</title>
   <script type="text/javascript" src="js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata%7CMerriweather" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -14,14 +15,24 @@
 <!-- Header -->
 
 <!-- Main -->
-<div id="main">
-  <input type="search" name="wikipedia-search">
-  <input type="submit" value="search"><button id="random-article-button">random article</button>
+<div id="main" class="center-everything">
+
+  <form id="search-form">
+    <div id="search-field-wrap">
+      <input id="search-field" type="search" placeholder="search for any Wikipedia article here" autofocus>
+    </div>
+
+    <div id="buttons-wrap">
+      <button id="submit-search-button">search</button>
+      <button id="random-article-button">random article</button>
+    </div>
+  </form>
+
 </div>
 
 <!-- Footer -->
-<footer id="footer">
-  Made by Filip Zalamans
+<footer id="footer" class="center-everything">
+  <span>Made by Filip Zalamans | <a href="https://github.com/bluesuede/wikipedia-viewer">Github</a></span>
 </footer>
 
 </body>
