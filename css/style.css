@@ -109,12 +109,9 @@ body {
 
 .search-result-anchor-wrap {
   width:100%;
-  display:flex;
-  justify-content: center;
   align-self: flex-start;
 
   margin-top: 1.5vh;
-
   display:none;
 }
 
@@ -123,12 +120,13 @@ body {
   max-width: 500px;
   display:flex;
   flex-direction: column;
-  height:100%;
+  margin: 0 auto;
 
   background-color: rgba(232,232,232,0.4);
   color: #292F36;
   cursor: pointer;
 
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding:1.5vh;
   text-decoration: none;
@@ -140,6 +138,7 @@ body {
   }
 
 .search-result-title {
+  height:5vh;
 }
 
 .search-result-description {
