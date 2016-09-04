@@ -6,14 +6,14 @@
   **/
 function successSearch() {
   var response                    = JSON.parse(this.responseText), // Make the JSON response into object
-      searchResultInfoSpan        = document.getElementById("search-result-info");
+      searchResultInfoSpan        = document.getElementById("search-result-info"),
       responseObject              = {};
 
       // If Wikipedia returns an error:
       // Display message from Wikipedia, stop executing function
       if(response.error){
-        searchResultInfoSpan.style        = "display:inline;";
-        searchResultInfoSpan.textContent  = response.error.info;
+        searchResultInfoSpan.style.display  = "inline";
+        searchResultInfoSpan.textContent    = response.error.info;
         return false;
       }
       // If Wikipedia returns data without an error:
@@ -31,7 +31,7 @@ function successSearch() {
       // If there is no result from the query:
       // Display message
       else {
-        searchResultInfoSpan.style = "display:inline;";
+        searchResultInfoSpan.style.display = "inline";
         searchResultInfoSpan.textContent = "No result could be found";
       }
 }
@@ -64,10 +64,10 @@ function addResultsToPage(responseObject) {
         resultTitleSpan         = searchResultAnchorWraps[i].children[0].children[0], // Span elements with class "search-result-title"
         resultDescriptionSpan   = searchResultAnchorWraps[i].children[0].children[1]; // Span elements with class "search-result-description"
 
-    searchResultAnchorWraps[i].style    = "display:inline-block;"; // Make sure anchors wraps are not hidden
-    resultAnchor.href                   = responseObject.links[i]; // Add href to anchor
-    resultTitleSpan.textContent         = responseObject.results[i]; // Add title text
-    resultDescriptionSpan.textContent   = responseObject.descriptions[i]; // Add description text
+    searchResultAnchorWraps[i].style.display  = "inline-block"; // Make sure anchors wraps are not hidden
+    resultAnchor.href                         = responseObject.links[i]; // Add href to anchor
+    resultTitleSpan.textContent               = responseObject.results[i]; // Add title text
+    resultDescriptionSpan.textContent         = responseObject.descriptions[i]; // Add description text
   }
 }
 
@@ -83,19 +83,19 @@ document.addEventListener("DOMContentLoaded", function() {
         searchResultAnchorWraps = document.getElementsByClassName("search-result-anchor-wrap");
 
     // Always make sure search-result-info span is hidden when form is submitted
-    searchResultInfoSpan.style = "display:none;";
+    searchResultInfoSpan.style.display = "none";
 
     // Always make sure all search-result-anchor-wraps are hidden when form is submitted
     // Make sure their text fields are empty aswell
     for(i = 0; i < searchResultAnchorWraps.length; i++) {
-      searchResultAnchorWraps[i].style = "display:none;";
+      searchResultAnchorWraps[i].style.display = "none";
     }
 
     // If the search field is empty:
     // Display message, stop executing function so that no GET request is made
     if(searchField.value === "") {
-      searchResultInfoSpan.style = "display:inline;";
-      searchResultInfoSpan.textContent = "No search query has been entered";
+      searchResultInfoSpan.style.display  = "inline";
+      searchResultInfoSpan.textContent    = "No search query has been entered";
       e.preventDefault();
       return false;
     }
