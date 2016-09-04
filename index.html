@@ -7,7 +7,7 @@
 
   <title>Wikipedia viewer</title>
   <script type="text/javascript" src="js/main.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata%7CMerriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <!-- Header -->
 
 <!-- Main -->
-<div id="main" class="center-everything">
+<div id="main">
 
   <form id="search-form">
     <div id="search-field-wrap">
@@ -24,14 +24,47 @@
 
     <div id="buttons-wrap">
       <button id="submit-search-button">search</button>
-      <button id="random-article-button">random article</button>
+      <a id="random-article-button" href="https://en.wikipedia.org/wiki/Special:Random">random article</a>
     </div>
   </form>
+
+  <span id="search-result-info"></span>
+
+  <div class="search-result-anchor-wrap">
+    <a class="search-result">
+      <span class="search-result-title"></span>
+      <span class="search-result-description"></span>
+    </a>
+  </div>
+  <div class="search-result-anchor-wrap">
+    <a class="search-result">
+      <span class="search-result-title"></span>
+      <span class="search-result-description"></span>
+    </a>
+  </div>
+  <div class="search-result-anchor-wrap">
+    <a class="search-result">
+      <span class="search-result-title"></span>
+      <span class="search-result-description"></span>
+    </a>
+  </div>
+  <div class="search-result-anchor-wrap">
+    <a class="search-result">
+      <span class="search-result-title"></span>
+      <span class="search-result-description"></span>
+    </a>
+  </div>
+  <div class="search-result-anchor-wrap">
+    <a class="search-result">
+      <span class="search-result-title"></span>
+      <span class="search-result-description"></span>
+    </a>
+  </div>
 
 </div>
 
 <!-- Footer -->
-<footer id="footer" class="center-everything">
+<footer id="footer">
   <span>Made by Filip Zalamans | <a href="https://github.com/bluesuede/wikipedia-viewer">Github</a></span>
 </footer>
 

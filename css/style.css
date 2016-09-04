@@ -2,9 +2,10 @@
   * COLORS BEING USED
   *
   * #FFFFFF
+  * #E8E8E8
+  * #292F36
   * #FF6B6B
   * #4ECDC4
-  * #292F36
   *
   **/
 
@@ -15,18 +16,18 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
-.center-everything {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #main {
-  height: 90%;
+  height: 89%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  margin-bottom: 1vh;
 }
 
 #search-form {
-  align-self: center;
+  margin-top:1vh;
+  height:17.8vh;
 }
 
 #search-field-wrap,
@@ -34,6 +35,13 @@ body {
 #search-form {
   width: 100%;
   text-align: center;
+}
+
+#search-field,
+#submit-search-button,
+#random-article-button,
+.search-result {
+  font-size:3.9vw;
 }
 
 #search-field {
@@ -80,6 +88,11 @@ body {
 
 #random-article-button {
   background-color: #FF6B6B;
+  text-decoration: none;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
   #random-article-button:hover {
@@ -88,29 +101,69 @@ body {
     background-color: #F97C7C;
   }
 
+#search-result-info {
+  max-width:70%;
+  margin:auto;
+  display:none;
+}
+
+.search-result-anchor-wrap {
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-self: flex-start;
+
+  margin-top: 1.5vh;
+
+  display:none;
+}
+
+.search-result {
+  width:70%;
+  max-width: 500px;
+  display:flex;
+  flex-direction: column;
+  height:100%;
+
+  background-color: rgba(232,232,232,0.4);
+  color: #292F36;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  padding:1.5vh;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+  .search-result:hover {
+    background-color: rgba(232,232,232,0.7);
+  }
+
+.search-result-title {
+}
+
+.search-result-description {
+  font-size: 13px;
+}
+
 #footer {
   height: 10%;
   font-size:11px;
   border-top: 1px solid #E8E8E8;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**
-  * Animations
+  * Media queries
   *
   **/
-@-webkit-keyframes slide-to-flex-start {
-  to   {  transform: translateY(-35vh); }
-}
-
-@keyframes slide-to-flex-start {
-  to   {  transform: translateY(-35vh); }
-}
-
-.do-slide-to-flex-start {
-  -webkit-animation: slide-to-flex-start 1s;
-  animation: slide-to-flex-start 1s;
-
-  -webkit-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
+@media (min-width:576px) {
+  #search-field,
+  #submit-search-button,
+  #random-article-button {
+    font-size: 18px;
+  }
 }
