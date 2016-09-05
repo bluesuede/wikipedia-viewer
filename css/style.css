@@ -54,6 +54,7 @@ body {
 
   border:1px solid #E8E8E8;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 #buttons-wrap {
@@ -78,6 +79,7 @@ body {
 
 #submit-search-button {
   background-color: #4ECDC4;
+  -webkit-appearance: none;
 }
 
   #submit-search-button:hover {
