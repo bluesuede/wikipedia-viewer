@@ -9,6 +9,12 @@
   *
   **/
 
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -26,6 +32,7 @@ body {
 }
 
 #search-form {
+  display: table;
   margin-top:1vh;
   height:17.8vh;
 }

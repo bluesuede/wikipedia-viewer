@@ -64,7 +64,7 @@ function addResultsToPage(responseObject) {
         resultTitleSpan         = searchResultAnchorWraps[i].children[0].children[0], // Span elements with class "search-result-title"
         resultDescriptionSpan   = searchResultAnchorWraps[i].children[0].children[1]; // Span elements with class "search-result-description"
 
-    searchResultAnchorWraps[i].style.display  = "inline-block"; // Make sure anchors wraps are not hidden
+    searchResultAnchorWraps[i].style.display  = "table"; // Make sure anchors wraps are not hidden
     resultAnchor.href                         = responseObject.links[i]; // Add href to anchor
     resultTitleSpan.textContent               = responseObject.results[i]; // Add title text
     resultDescriptionSpan.textContent         = responseObject.descriptions[i]; // Add description text
